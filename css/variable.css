@@ -1,0 +1,8 @@
+:root {
+    --main: #fff;
+    --backprofile: linear-gradient(90deg, #d8d8d8, #dfdfdf, #d8d8d8);
+    --textprofile: #333;
+    --infoorder: rgb(208, 170, 219, 0.35);
+    --fh3: #a07a9c;
+    --fp: #c0a0c0;
+}

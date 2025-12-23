@@ -1,0 +1,259 @@
+/* Слайдер */
+.slider-section {
+    position: relative;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.5);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.slider-btn:hover {
+    background: rgba(255,255,255,0.8);
+}
+
+.prev {
+    left: 1rem;
+}
+
+.next {
+    right: 1rem;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+}
+
+.dot.active {
+    background: white;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 1rem;
+    font-style: italic;
+    color: #a07a9c;
+}
+
+/* Корзина услуг */
+.products-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: #a07a9c;
+    margin: 0;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: var(--fp);
+    margin: 0.5rem 0 0 0;
+}
+
+.section-header a {
+    color: #a07a9c;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
+.all-products-link:hover {
+    color: var(--fp);
+    text-decoration: underline;
+}
+
+.products-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.filters select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .filters {
+        width: 100%;
+    }
+}
+
+.view-details {
+    display: inline-block;
+    color: #a07a9c;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.view-details:hover {
+    text-decoration: underline;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 0.5rem;
+    color: #a07a9c;
+}
+
+.product-card p {
+    color: var(--fp);
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-weight: bold;
+    color: #a07a9c;
+    margin: 0.5rem 0;
+}
+
+.add-to-cart {
+    background: #a07a9c;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 8px rgba(160, 122, 156, 0.3);
+}
+
+.add-to-cart:hover {
+    background: var(--fp);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(160, 122, 156, 0.4);
+}
+
+.add-to-cart:active {
+    transform: translateY(0);
+}
